@@ -63,10 +63,10 @@ class ClientProfileModal extends React.Component {
             //           </div>
             //     </div>
             // </div>
-            <div id="myModal" class="modal" >
-                <div class="modal-content">
+            <div id="myModal" className="modal" >
+                <div className="modal-content">
                     <h2 className="selected-client">Client: {this.props.selectedClient.name}</h2>
-                    {/* <span class="close">x</span> */}
+                    {/* <span className="close">x</span> */}
                     <table style={{width:"100%"}}>
                      <tbody>
                      <tr className="top-row">
@@ -88,6 +88,10 @@ class ClientProfileModal extends React.Component {
                      <tr className="top-row">
                          <th>State</th>
                          <th>{this.props.selectedClient.state}</th> 
+                     </tr>
+                     <tr className="top-row">
+                         <th>Zip Code</th>
+                         <th>{this.props.selectedClient.zip_code}</th> 
                      </tr>
                      <tr className="top-row">
                          <th>Public Private</th>

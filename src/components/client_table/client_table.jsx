@@ -11,9 +11,9 @@ class ClientTable extends React.Component {
         this.renderModal = this.renderModal.bind(this);
     }
 
-    componentWillMount() {
-        this.props.fetchClients()
-    }
+    // componentWillMount() {
+    //     this.props.fetchClients()
+    // }
 
     handleClick(clientId) {
         this.props.fetchClient(clientId).then(

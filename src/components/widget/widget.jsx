@@ -1,7 +1,8 @@
 import React from 'react';
 import ClientTableContainer from '../client_table/client_table_container';
 import Modal from '../../components/modal';
-import Map from '../map/map';
+import MapContainer from '../map/map_container';
+import LocationGetter from '../map/locationGetter';
 
 class Widget extends React.Component {
     constructor(props) {
@@ -17,6 +18,10 @@ class Widget extends React.Component {
                 [field]: e.currentTarget.value
             });
         };
+    }
+
+    componentWillMount() {
+        this.props.fetchClients()
     }
 
     render() {
@@ -46,7 +51,7 @@ class Widget extends React.Component {
                 {this.state.display === 'clients' && 
                 <ClientTableContainer style={{display: this.state.display === 'clients' ? 'block' : 'none'}} />}
                 {this.state.display === 'map' && 
-                <Map style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
+                <LocationGetter style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
             </div>
         )
     }
