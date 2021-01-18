@@ -33,7 +33,7 @@ const Map = ({clients, locations, fetchLocation }) => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={3.8}
+        zoom={4}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
