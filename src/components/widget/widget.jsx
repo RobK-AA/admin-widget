@@ -1,7 +1,7 @@
 import React from 'react';
 import ClientTableContainer from '../client_table/client_table_container';
 import Modal from '../../components/modal';
-import MapContainer from '../map/map_container';
+import ManagerTableContainer from '../manager_table/manager_table_container';
 import LocationGetter from '../map/locationGetter';
 
 class Widget extends React.Component {
@@ -21,7 +21,8 @@ class Widget extends React.Component {
     }
 
     componentWillMount() {
-        this.props.fetchClients()
+        this.props.fetchClients();
+        this.props.fetchManagers();
     }
 
     render() {
@@ -30,12 +31,12 @@ class Widget extends React.Component {
         return (
             <div id="main-app">
                 <h1>Admin Wizard</h1>
-                <Modal>
+                {/* <Modal>
                     <div 
                         style={{color:'black'}}
                     >
                     </div>
-                </Modal>
+                </Modal> */}
                 <button
                     value="clients"
                     onClick={this.update("display")}
@@ -52,6 +53,8 @@ class Widget extends React.Component {
                 <ClientTableContainer style={{display: this.state.display === 'clients' ? 'block' : 'none'}} />}
                 {this.state.display === 'map' && 
                 <LocationGetter style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
+                {this.state.display === 'managers' && 
+                <ManagerTableContainer style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
             </div>
         )
     }

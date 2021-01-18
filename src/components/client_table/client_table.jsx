@@ -11,16 +11,11 @@ class ClientTable extends React.Component {
         this.renderModal = this.renderModal.bind(this);
     }
 
-    // componentWillMount() {
-    //     this.props.fetchClients()
-    // }
-
     handleClick(clientId) {
         this.props.fetchClient(clientId).then(
             this.renderModal()).catch(
             errors =>
-            this.setState({ errors })).then(console.log(document.getElementById("myModal").style.display));
-            
+            this.setState({ errors }));
     }
 
     renderModal() {
@@ -44,36 +39,17 @@ class ClientTable extends React.Component {
                 document.body.style.height = "auto";
             } else {
                 
-                modal.style.display = "block";
-                document.body.style.overflow = "auto";
-                document.body.style.height = "auto";
+                // modal.style.display = "block";
+                // document.body.style.overflow = "auto";
+                // document.body.style.height = "auto";
             }
             
         }
     }
 
-    // renderModal() {
-    //     const modalContainer = document.getElementById('modal');
-    //     const images = document.getElementsByClassName('images');
-    //     const modalImg = document.getElementById("modal-image");
-    //     modalContainer.style.display = "block";
-    //     document.body.style.overflow = "hidden";
-    //     document.body.style.height = "100%";
-    //     const span = document.getElementsByClassName("close")[0];
-
-    //     span.onclick = function () {
-    //         document.body.style.overflow = "auto";
-    //         document.body.style.height = "auto"; 
-    //         modalContainer.style.display = "none";
-    //     }
-    // }
-
     update(field) {
         return e => {
-            // if (this.props.errors) this.props.clearErrors();
-            this.setState({
-                [field]: e.currentTarget.value
-            });
+            this.setState({ [field]: e.currentTarget.value });
         };
     }
 

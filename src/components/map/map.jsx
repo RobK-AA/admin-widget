@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useCallback, memo } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-const Map = ({clients, locations, fetchLocation }) => {
+const Map = ({ locations }) => {
     const containerStyle = {
         width: '75%',
         height: '400px'
@@ -17,15 +17,13 @@ const Map = ({clients, locations, fetchLocation }) => {
         googleMapsApiKey: "AIzaSyDYvOc7LNWIAuEr5AnVBEU2_YnoUehlnh4"
     })
 
-    const [map, setMap] = React.useState(null)
+    const [map, setMap] = useState(null)
 
-    const onLoad = React.useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds();
-        map.fitBounds(bounds);
+    const onLoad = useCallback(function callback(map) {
         setMap(map)
     }, [])
 
-    const onUnmount = React.useCallback(function callback(map) {
+    const onUnmount = useCallback(function callback(map) {
         setMap(null)
     }, [])
     
@@ -38,9 +36,9 @@ const Map = ({clients, locations, fetchLocation }) => {
         onUnmount={onUnmount}
       >
           {
-            locations.map(location => {
+            locations.map((location, i) => {
               return (
-              <Marker label="Client" key={location.results[0].geometry} position={location.results[0].geometry.location}/>
+              <Marker label="Client" key={i} position={location.results[0].geometry.location}/>
               )
             })
          }
@@ -48,4 +46,4 @@ const Map = ({clients, locations, fetchLocation }) => {
   ) : <></>
 }
 
-export default React.memo(Map);
+export default memo(Map);

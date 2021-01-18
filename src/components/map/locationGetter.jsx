@@ -6,37 +6,25 @@ import { connect } from 'react-redux';
 class LocationGetter extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            locations: {}
-        }
     }
 
     componentWillMount() {
         this.props.clients.forEach((client) => {
-            
             this.props.fetchLocation(client.zip_code.slice(0, 4));
         })
     }
 
-    componentDidMount() {
-        
-    }
-
     render() {
-        
         return (
             <div>
+                <h2 className="map-header">Client Org Locations</h2>
                 <MapContainer />
             </div>
         )
     }
 }
 
-const mapStateToProps = ({ clients, locations }) => {
-    return {
-        clients, locations
-    }
-}
+const mapStateToProps = ({ clients }) => ({ clients });
 
 const mapDispatchToProps = dispatch => {
     return {

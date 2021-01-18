@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import Map from './map';
 import { fetchLocation } from '../../actions/location_actions';
 
-const mapStateToProps = ({ clients, locations, errors }) => {
+const mapStateToProps = ({ clients, locations }) => {
     return {
         clients,
         locations
