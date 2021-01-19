@@ -18,8 +18,8 @@ class LocationGetter extends React.Component {
     render() {
         return (
             <div id="map-container">
-                <h2 className="map-header">Client Org Locations</h2>
-                <h5 className="warning">Please note these locations are based on the zip code input, which may be erroneous. Please make sure you verify the zip code of each client to view the most accurate map!</h5>
+                <h1 className="map-header">Client Organization Locations</h1>
+                <h5 className="warning">Please note these locations are based on the zip code input, which may be erroneous. Erroneous zip codes may not correspond to actual locations and thus, may not be displayed. Please make sure you verify the zip code of each client to view the most accurate map!</h5>
                 <MapContainer />
             </div>
         )
