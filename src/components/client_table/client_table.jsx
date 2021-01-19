@@ -57,7 +57,7 @@ class ClientTable extends React.Component {
         const clients  = Object.values(this.props.clients);
         return (
             <div className="report-container">
-                <h1>Registered client Report</h1>
+                <h1>Client Organizations</h1>
                 <ClientProfileModalContainer />
                 <div>
                 <table className="client-table" style={{width:"100%"}}>

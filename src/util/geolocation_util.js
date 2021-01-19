@@ -2,6 +2,6 @@ import $ from 'jquery';
 
 export const fetchLocation = (zipCode) => {
   return $.ajax({
-    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode}&key=AIzaSyDYvOc7LNWIAuEr5AnVBEU2_YnoUehlnh4`
+    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${zipCode},US&key=AIzaSyDYvOc7LNWIAuEr5AnVBEU2_YnoUehlnh4`
   })
 };

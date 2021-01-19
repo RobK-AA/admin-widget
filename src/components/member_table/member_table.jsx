@@ -20,7 +20,6 @@ class MemberTable extends React.Component {
             this.props.history.push('/')
         }).catch(err => {
             alert(`I'm sorry, we could not update ${this.state.memberName}'s organization Id to ${this.state.newOrganizationId}. The server has responded with the following message: ${err.responseJSON}`)
-            console.log(err);
         })
     }
 

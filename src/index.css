@@ -188,6 +188,7 @@ button:focus { outline:0 !important; }
   width: 150px;
 }
 
-#modal-col-right {
-  
+.warning {
+  width: 75%;
+  text-align: center;
 }

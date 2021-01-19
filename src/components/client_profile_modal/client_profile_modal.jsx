@@ -3,17 +3,9 @@ import React from 'react';
 class ClientProfileModal extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            visible: false,
-            selectedUserId: null
-        }
-    }
-    componentWillReceiveProps(nextProps) {
-        this.setState({ selectedUser: nextProps.selectedClient })
     }
 
     render() {
-        
         return (
             <div id="myModal" className="modal" >
                 <div className="modal-content">

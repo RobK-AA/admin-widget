@@ -38,7 +38,7 @@ const Map = ({ locations }) => {
           {
             locations.map((location, i) => {
               return (
-              <Marker label="Client" key={i} position={location.results[0].geometry.location}/>
+              <Marker label="Client" key={i} position={location.results[0] !== undefined ? location.results[0].geometry.location : null}/>
               )
             })
          }
