@@ -3,6 +3,7 @@ import ClientTableContainer from '../client_table/client_table_container';
 import Modal from '../../components/modal';
 import ManagerTableContainer from '../manager_table/manager_table_container';
 import LocationGetter from '../map/locationGetter';
+import MemberTableContainer from '../member_table/member_table_container';
 
 class Widget extends React.Component {
     constructor(props) {
@@ -31,12 +32,6 @@ class Widget extends React.Component {
         return (
             <div id="main-app">
                 <h1>Admin Wizard</h1>
-                {/* <Modal>
-                    <div 
-                        style={{color:'black'}}
-                    >
-                    </div>
-                </Modal> */}
                 <button
                     value="clients"
                     onClick={this.update("display")}
@@ -49,12 +44,18 @@ class Widget extends React.Component {
                     value="managers"
                     onClick={this.update("display")}
                 >Managers</button>
+                <button
+                    value="edit"
+                    onClick={this.update("display")}
+                >Edit Member Organization ID</button>
                 {this.state.display === 'clients' && 
                 <ClientTableContainer style={{display: this.state.display === 'clients' ? 'block' : 'none'}} />}
                 {this.state.display === 'map' && 
                 <LocationGetter style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
                 {this.state.display === 'managers' && 
                 <ManagerTableContainer style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
+                {this.state.display === 'edit' && 
+                <MemberTableContainer style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
             </div>
         )
     }
