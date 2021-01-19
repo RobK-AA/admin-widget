@@ -31,23 +31,27 @@ class Widget extends React.Component {
 
         return (
             <div id="main-app">
-                <h1>Admin Wizard</h1>
-                <button
-                    value="clients"
-                    onClick={this.update("display")}
-                >Client Organizations</button>
-                <button
-                    value="map"
-                    onClick={this.update("display")}
-                >Map</button>
-                <button
-                    value="managers"
-                    onClick={this.update("display")}
-                >Managers</button>
-                <button
-                    value="edit"
-                    onClick={this.update("display")}
-                >Edit Member Organization ID</button>
+                <h1 id="main-title">Admin Wizard</h1>
+                <div id="dashboard-container">
+                    <div id="dashboard">
+                    <button
+                        value="clients"
+                        onClick={this.update("display")}
+                    >Client Organizations</button>
+                    <button
+                        value="map"
+                        onClick={this.update("display")}
+                    >Map</button>
+                    <button
+                        value="managers"
+                        onClick={this.update("display")}
+                    >Managers</button>
+                    <button
+                        value="edit"
+                        onClick={this.update("display")}
+                    >Edit Member Organization ID</button>
+                </div>
+                </div>
                 {this.state.display === 'clients' && 
                 <ClientTableContainer style={{display: this.state.display === 'clients' ? 'block' : 'none'}} />}
                 {this.state.display === 'map' && 
@@ -56,6 +60,7 @@ class Widget extends React.Component {
                 <ManagerTableContainer style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
                 {this.state.display === 'edit' && 
                 <MemberTableContainer style={{display: this.state.display === 'map' ? 'block' : 'none'}} />}
+                <div className="footer"></div>
             </div>
         )
     }

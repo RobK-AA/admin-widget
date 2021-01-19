@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* height: 100vh;
+  width: 100vw; */
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(113, 208, 224);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
@@ -28,90 +40,31 @@ code {
   opacity: 0.7;
 }
 
-/* .modal {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 50em;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9); 
-}
-
-.modal-content {
-  position: absolute;
-  margin: auto;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-.close {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  top: 25px;
-  right: 55px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 80%;
-  }
-} */
-
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-The Close Button
 .close {
   color: #aaaaaa;
   float: right;
@@ -126,27 +79,6 @@ The Close Button
   cursor: pointer;
 }
 
-/* .Modal {
-    position: fixed;
-    z-index: 500;
-    background-color: white;
-    width: 70%;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px black;
-    padding: 16px;
-    left: 15%;
-    top: 30%;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
-}
-
-@media (min-width: 600px) {
-    .Modal {
-        width: 500px;
-        left: calc(50% - 250px);
-    }
-} */
-
 .client-tr:hover {
   cursor: pointer;
   background-color: yellowgreen;
@@ -154,4 +86,101 @@ The Close Button
 
 .selected-client {
     text-align-last: center;
+}
+
+#main-title {
+  font-family: 'Lyon Text Web Black', Fallback, sans-serif;
+  text-align-last: center;
+  color: rgba(0,0,0,0.6);
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+  font-size: 48px;
+}
+
+#map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.top-row {
+    background-color: rgb(31, 134, 168);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+tr:nth-child(even) {
+    background-color:rgb(190, 225, 236);
+    background-image: none;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tbody {
+    background-color: white;
+}
+
+tr:first {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#dashboard-container {
+  display: flex;
+  justify-content: center;
+}
+
+#dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+}
+
+button {
+    -webkit-justify-content: center;
+    transition: background-color .25s;
+    border-radius: 100px;
+    border: 1px solid rgb(3, 25, 32);
+    background: #fff;
+    color: #412dff;
+    height: 60px;
+    width: 170px;
+    font-family: 'Meera Inimai', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: transparent;
+  transition: background-color .25s;
+}
+
+button:focus { outline:0 !important; }
+
+.footer {
+  height: 100px;
+}
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-row {
+  background-color: white !important;
+}
+
+#modal-col {
+  background-color: rgb(31, 134, 168);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 150px;
+}
+
+#modal-col-right {
+  
 }

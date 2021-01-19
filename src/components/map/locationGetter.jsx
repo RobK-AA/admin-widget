@@ -16,7 +16,7 @@ class LocationGetter extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="map-container">
                 <h2 className="map-header">Client Org Locations</h2>
                 <MapContainer />
             </div>

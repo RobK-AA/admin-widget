@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/854f40508546a6154ded78884803020e?family=Lyon+Text+Web+Black);
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Lyon Text Web Black"; 
+  src: url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.eot"); 
+  src: url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/854f40508546a6154ded78884803020e.svg#Lyon Text Web Black") format("svg"); }
+

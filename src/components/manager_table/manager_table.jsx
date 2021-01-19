@@ -10,9 +10,9 @@ class ManagerTable extends React.Component {
         const clientOrgIds = clients.map(client => client.id);
         return (
             <div className="report-container">
-                <h1>Managers at Client Orgs</h1>
+                <h1>Managers</h1>
                 <div>
-                <table className="client-table" style={{width:"100%"}}>
+                <table className="client-table" >
                     <tbody>
                     <tr className="top-row">
                         <th>Name</th>
