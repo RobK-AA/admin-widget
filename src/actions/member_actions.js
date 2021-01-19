@@ -34,9 +34,9 @@ export const fetchMembers = () => dispatch => {
     )
 };
 
-export const updateMember = (memberId) => dispatch => {
-    return MemberAPIUtil.updateMember(memberId).then(
-        member => dispatch(receiveMembers(member),
+export const updateMember = (member, memberId) => dispatch => {
+    return MemberAPIUtil.updateMember(member, memberId).then(
+        member => dispatch(receiveMember(member),
         errors => {
             dispatch(receiveMemberErrors(errors.responseJSON))
         })

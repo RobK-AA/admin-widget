@@ -3,6 +3,7 @@ import MemberTable from './member_table';
 import { fetchClients } from '../../actions/client_actions';
 import { fetchLocation } from '../../actions/location_actions';
 import { fetchMembers } from '../../actions/manager_actions';
+import { updateMember } from '../../actions/member_actions';
 
 const mapStateToProps = ({ members }) => {
     return { members }
@@ -10,9 +11,7 @@ const mapStateToProps = ({ members }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchClients: () => dispatch(fetchClients()),
-        fetchLocation: (zipCode) => dispatch(fetchLocation(zipCode)),
-        fetchMembers: () => dispatch(fetchMembers()), 
+        updateMember: (member, memberId) => dispatch(updateMember(member, memberId))
     }
 }
 

@@ -6,9 +6,10 @@ export const fetchMembers = () => {
   })
 };
 
-export const updateMember = (memberId) => {
+export const updateMember = (member, memberId) => {
   return $.ajax({
     url: `https://5fe220547a9487001768215e.mockapi.io/api/v1/members/${memberId}`,
-    method: "PATCH"
+    method: "PUT",
+    data: { member }
   })
 };
