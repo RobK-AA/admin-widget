@@ -35,18 +35,22 @@ class Widget extends React.Component {
                 <div id="dashboard-container">
                     <div id="dashboard">
                     <button
+                        className="dashboard-button"
                         value="clients"
                         onClick={this.update("display")}
                     >Client Organizations</button>
                     <button
+                        className="dashboard-button"
                         value="map"
                         onClick={this.update("display")}
                     >Map</button>
                     <button
+                        className="dashboard-button"
                         value="managers"
                         onClick={this.update("display")}
                     >Managers</button>
                     <button
+                        className="dashboard-button"
                         value="edit"
                         onClick={this.update("display")}
                     >Edit Member Organization ID</button>

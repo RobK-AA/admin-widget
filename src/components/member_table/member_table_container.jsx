@@ -4,12 +4,8 @@ import { fetchClients } from '../../actions/client_actions';
 import { fetchLocation } from '../../actions/location_actions';
 import { fetchMembers } from '../../actions/manager_actions';
 
-const mapStateToProps = ({ clients, locations, errors }) => {
-    return {
-        clients,
-        locations,
-        errors
-    }
+const mapStateToProps = ({ members }) => {
+    return { members }
 }
 
 const mapDispatchToProps = dispatch => {

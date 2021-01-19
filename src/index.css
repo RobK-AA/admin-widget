@@ -139,7 +139,7 @@ tr:first {
   width: 75%;
 }
 
-button {
+.dashboard-button {
     -webkit-justify-content: center;
     transition: background-color .25s;
     border-radius: 100px;
@@ -153,10 +153,17 @@ button {
     font-size: 16px;
 }
 
-button:hover {
-  cursor: pointer;
+.dashboard-button:hover {
   background: transparent;
   transition: background-color .25s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.update-button:hover {
+  cursor: pointer;
 }
 
 button:focus { outline:0 !important; }
