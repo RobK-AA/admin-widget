@@ -11,7 +11,7 @@ class LocationGetter extends React.Component {
     componentWillMount() {
         const clients = this.props.clients;
         clients.forEach((client) => {
-            this.props.fetchLocation(client.zip_code.slice(0, 5) + " USA");
+            this.props.fetchLocation(client.zip_code);
         })
     }
 

@@ -17,6 +17,7 @@ Welcome to Admin Wizard - an app built to help professionals manage their inform
 - ReactJS
 - Redux
 - jQuery
+- Google Maps API
 - JavaScript
 - HTML
 - CSS
